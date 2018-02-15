@@ -4,7 +4,7 @@ const sections = require('./sections.json')
 // Create a server with a host and port
 const server = Hapi.server({
 	host: 'localhost',
-	port: 8000
+	port: process.env.PORT || 5000
 });
 
 server.ext('onRequest', function (request, h) {
